@@ -2,44 +2,59 @@
 <html lang="en">
 <head>
     {% load static %}
-    <link rel="stylesheet" href="{{'/css/style.css'}}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{'/css/style.css'}}">
     <meta charset="UTF-8">
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Bói bài</title>
 </head>
 <body>
-    <div class="">
-    <h3 class="display-3" id="header"  >Bạn là lá bài nào?</h3>
+   <!--add-->
+    <div class="row">
+        <div class="col-sm-2">
+        <p>add</p>
     </div>
-    <div>
+
+    <div class="col-sm-8" id="content">
+     <h4 id="header"  >Bạn là lá bài nào?</h4>
+        <div>
         <p>52 lá bài trong bộ bài Tây tương ứng với 52 tuần trong một năm. Và 12 quân bài có hình người (quân K, Q, J)
             tượng trưng cho 12 tháng của năm. Hai màu (đỏ và đen) thể hiện cho tính chủ động nam tính (đen) và tính thụ
             động nữ tính (đỏ). 4 nước bài: Cơ (Hearts), Rô (Diamonds), Chồn (Clubs) và Bích (Spades) tượng trưng cho 4
-            mùa và 4 yếu tố trong thuật chiêm tinh: <br>
+            mùa và 4 yếu tố trong thuật chiêm tinh: </p>
             <ul>
-                <li>Cơ – Nước – Mùa xuân</li>
-                <li>Tép(Chuồn) – Lửa – Mùa hè</li>
-                <li>Rô – Trái Đất – Mùa thu</li>
-                <li>Bích – Không khí – Mùa đông</li>
+                <li style="color:#488bff">Cơ – Nước – Mùa xuân</li>
+                <li style="color:#ff3335">Chuồn – Lửa – Mùa hè</li>
+                <li style="color:#6e4c3a">Rô – Trái Đất – Mùa thu</li>
+                <li style="color:#ff8724">Bích – Không khí – Mùa đông</li>
             </ul>
-        <br>
-            Hãy chọn ngày sinh của bạn để biết lá bài và tìm hiểu ý nghĩa của nó.
-        </p>
+            <p>
+            Hãy chọn ngày sinh của bạn để biết lá bài và tìm hiểu ý nghĩa của nó
+         </p>
+    </div>
+        <div class="birth_form">
+            <div id="form">
+                <form action="" method="post">
+            {% csrf_token %}
+            {{form}}
+            <input type="submit" value="Xem lá bài" id="submit_button">
+            </form>
+            </div>
+
+        </div>
 
     </div>
-    <div class="birth-form">
-        <form action="" method="post">
-        {% csrf_token %}
-        {{form}}
-        <input type="submit" value="Gửi">
-    </form>
+
+        <!--add-->
+    <div class="col-sm-2">
+        <p>add</p>
     </div>
 
-    <!-- facebook authen -->
-    <div class="fb-login-button" data-width="" data-size="large" data-button-type="continue_with" data-auto-logout-link="false" data-use-continue-as="false"></div>
+
+
+
 
         <!-- jQuery library -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
