@@ -1,0 +1,1 @@
+my fisrt django app. birth day to card
